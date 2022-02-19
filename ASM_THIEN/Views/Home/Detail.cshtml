@@ -1,0 +1,52 @@
+﻿@using ASM.Models
+@model AddCart
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Product Detail";
+    Product product = ViewData["product"] as Product;
+}
+
+<section>
+    <form asp-action="cart" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 padding-right">
+                    <div class="product-details">
+
+                        <!--product-details-->
+                        <div class="col-sm-4">
+                            <div class="view-product">
+                                <img src="~/Uploads/@product.Image" alt="" />
+                            </div>
+
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="product-information">
+
+                                <!--/product-information-->
+                                <img src="~/images/product-details/new.jpg" class="newarrival" alt="" />
+                                <h2>@product.Name</h2>
+                                <span>
+                                    <span>US $@product.Price</span>
+                                    <label>Quantity:</label>
+                                    <input asp-for="Quantity" />
+                                    <input type="hidden" asp-for="Id" />
+                                    <button type="submit" asp-action="buy" class="btn btn-fefault cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Add to cart
+                                    </button>
+                                </span>
+                                <p><b>Availability:</b> @product.Available</p>
+                                <p><b>Condition:</b> @product.Condition</p>
+                                <p><b>Brand:</b> @product.Brand</p>
+                            </div><!--/product-information-->
+                        </div>
+                    </div><!--/product-details-->
+
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

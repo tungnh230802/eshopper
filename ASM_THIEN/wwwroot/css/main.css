@@ -2439,3 +2439,26 @@ textarea {
 .contact-info .social-networks ul li a:hover {
     color: #FE980F;
 }
+
+
+.btn-submit {
+    background-color: #FE980F;
+    color:white;
+}
+.img-pr {
+    height: 235.06px;
+}
+.cart_quantity_input{
+    width:60px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
