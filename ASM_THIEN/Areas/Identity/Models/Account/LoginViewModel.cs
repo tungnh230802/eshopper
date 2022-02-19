@@ -11,17 +11,15 @@ namespace App.Areas.Identity.Models.AccountViewModels
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "Phải nhập {0}")]
-        [Display(Name = "Địa chỉ email hoặc tên tài khoản")]
-        public string UserNameOrEmail { get; set; }
+        [Required]
+        public string Email { get; set; }
 
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
-        [Display(Name = "Nhớ thông tin đăng nhập?")]
+        [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
 }

@@ -9,22 +9,23 @@
     <form asp-area="Identity" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" asp-area="Identity"  asp-controller="Manage" asp-action="Index" title="Manage">Xin chào @UserManager.GetUserName(User)!</a>
+                <a class="nav-link" href="#" title="Manage">Xin chào @UserManager.GetUserName(User)!</a>
             </li>
             <li class="nav-item">
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Đăng xuất</button>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
             </li>
         </ul>
     </form>
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
+    @*<ul class="nav navbar-nav navbar-right">
         <li class="nav-item">
             <a class="nav-link" asp-area="Identity" asp-controller="Account" asp-action="Register">Đăng ký</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" asp-area="Identity" asp-controller="Account" asp-action="Login">Đăng nhập</a>
         </li>
-    </ul>
+    </ul>*@
+    <li><a asp-area="Identity" asp-controller="Account" asp-action="Login"><i class="fa fa-lock"></i> Login</a></li>
 }
